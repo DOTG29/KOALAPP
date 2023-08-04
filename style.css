@@ -1,7 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: rgb(97,97,97);
+    background: linear-gradient(0deg, rgba(97,97,97,1) 0%, rgba(156,156,156,1) 0%, rgba(255,255,255,1) 56%);
+}
+
 .page {
     display: none;
 }
 
 .show {
     display: block;
+}
+
+
+/* partie login */
+
+#login {
+    width: 350px;
+}
+
+#login img {
+    width: 60px;
+    height: 60px;
+}
+
+#login button {
+    width: 100%;
 }
