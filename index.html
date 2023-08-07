@@ -32,17 +32,28 @@
 
 <!-- homepage -->
 
-    <div id="homepage" class="page">
-      <h1>homepage</h1>
-      <nav>
-        <ul>
-          <li><a id="button-home">home</a></li>
-          <li><a id="button-newquestion">newquestion</a></li>
-          <li><a id="button-leaderboard">leaderboard</a></li>
-          <li><a id="button-logout">logout</a></li>
-        </ul>
-      </nav>
+    <div id="homepage" class="position-absolute top-0 text-bg-dark page">
+        <nav>
+          <ul class="nav align-items-center ps-5">
+            <li class="nav-item d-flex flex-row align-items-center">
+              <img class="homeimg" src="images/message.png" alt="image de chat">
+              <a id="button-home" class="nav-link link-light active" aria-current="page">Page d'accueil</a>
+            </li>
+            <li class="nav-item text-center">
+              <a id="button-newquestion" class="nav-link link-light">Nouvelle question</a>
+            </li>
+            <li class="nav-item text-center">
+              <a id="button-leaderboard" class="nav-link link-light">Classement</a>
+            </li>
+          </ul>
+          <ul class="nav align-items-center position-absolute top-0 end-0">
+            <li class="nav-item text-center">
+              <a id="button-logout" class="nav-link link-light">Déconnexion</a>
+            </li>
+          </ul>
+        </nav>
     </div>
+
 
 <!-- newquestion page -->
 

@@ -33,3 +33,31 @@ body {
 #login button {
     width: 100%;
 }
+
+/*partie navigation*/
+
+#homepage {
+    width: 100%;
+    height: 80px;
+}
+
+#homepage nav {
+    height: 100%;
+}
+
+#homepage ul {
+    height: 100%;
+}
+
+.homeimg {
+    width: 60px;
+    height: 60px;
+}
+
+#homepage li {
+    height: 100%;
+}
+
+#homepage li:hover {
+    background-color: #4e4e4e;
+}
