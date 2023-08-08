@@ -1,11 +1,13 @@
 const loginPage = document.getElementById('login');
 const homePage = document.getElementById('homepage');
+const navbar = document.getElementById('navbar');
 const newquestionPage = document.getElementById('newquestion');
 const leaderboardPage = document.getElementById('leaderboard');
 
 
 export function login() {
     cachePage();
+    navbar.classList.add("show")
     homePage.classList.add("show")
     history.pushState(null, "", 'homepage'); 
 }
@@ -18,20 +20,21 @@ export function logout() {
 
 export function home() {
     cachePage();
+    navbar.classList.add("show")
     homePage.classList.add("show")
     history.pushState(null, "", 'homepage'); 
 }
 
 export function newquestion() {
     cachePage();
-    homePage.classList.add("show")
+    navbar.classList.add("show")
     newquestionPage.classList.add("show")
     history.pushState(null, "", 'addquestion'); 
 }
 
 export function leaderboard() {
     cachePage();
-    homePage.classList.add("show")
+    navbar.classList.add("show")
     leaderboardPage.classList.add("show")
     history.pushState(null, "", 'leaderboard'); 
 }

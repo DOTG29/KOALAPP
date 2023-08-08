@@ -30,30 +30,42 @@
       </div>
     </div>
 
-<!-- homepage -->
+<!-- navbar -->
 
-    <div id="homepage" class="position-absolute top-0 text-bg-dark page">
+    <div id="navbar" class="position-absolute top-0 text-bg-dark px-5 page">
         <nav>
-          <ul class="nav align-items-center ps-5">
-            <li class="nav-item d-flex flex-row align-items-center">
+          <ul class="nav align-items-center ms-5">
+            <li class="nav-item d-flex flex-row align-items-center px-3  border-start border-dark-subtle">
               <img class="homeimg" src="images/message.png" alt="image de chat">
               <a id="button-home" class="nav-link link-light active" aria-current="page">Page d'accueil</a>
             </li>
-            <li class="nav-item text-center">
+            <li class="nav-item text-center d-flex align-items-center px-3  border-start border-dark-subtle">
               <a id="button-newquestion" class="nav-link link-light">Nouvelle question</a>
             </li>
-            <li class="nav-item text-center">
+            <li class="nav-item text-center d-flex  align-items-center px-3 border-end border-start border-dark-subtle">
               <a id="button-leaderboard" class="nav-link link-light">Classement</a>
             </li>
           </ul>
           <ul class="nav align-items-center position-absolute top-0 end-0">
-            <li class="nav-item text-center">
+            <li class="nav-item text-center d-flex align-items-center border-end border-start border-dark-subtle">
               <a id="button-logout" class="nav-link link-light">Déconnexion</a>
             </li>
           </ul>
         </nav>
     </div>
 
+<!-- homepage -->
+
+<div id="homepage" class="position-absolute page">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link">question pas repondu</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">question repondu</a>
+    </li>
+  </ul>
+</div>
 
 <!-- newquestion page -->
 

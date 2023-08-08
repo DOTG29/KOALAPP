@@ -36,16 +36,16 @@ body {
 
 /*partie navigation*/
 
-#homepage {
+#navbar {
     width: 100%;
     height: 80px;
 }
 
-#homepage nav {
+#navbar nav {
     height: 100%;
 }
 
-#homepage ul {
+#navbar ul {
     height: 100%;
 }
 
@@ -54,10 +54,18 @@ body {
     height: 60px;
 }
 
-#homepage li {
+#navbar li {
     height: 100%;
 }
 
-#homepage li:hover {
+#navbar li:hover {
     background-color: #4e4e4e;
+}
+
+/*partie homepage*/
+
+#homepage {
+    width: 50%;
+    top: 25%;
+    left: 25%;
 }
