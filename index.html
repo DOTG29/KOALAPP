@@ -14,16 +14,34 @@
     <div class="d-flex justify-content-center align-items-center h-75 ">
       <div id="login" class="page">
         <span class="d-flex flex-row align-items-center mb-1">
-          <img src="images/message.png" alt="image de chat">
+          <img id="image-chat" src="images/message.png" alt="image de chat">
           <h1 class="fs-5 ms-3">Se connecter à son compte</h1>
         </span>
         <div class="border border-dark-subtle rounded-1 p-3">
-          <select class="form-select mb-3" id="inputGroupSelect01">
-            <option selected>Sélectionner un utilisateur...</option>
-            <option value="1">Utilisateur 1</option>
-            <option value="2">Utilisateur 2</option>
-            <option value="3">Utilisateur 3</option>
-          </select>
+
+          <div class='mb-3 dropdown-container closed' id='select-user-dropdown'>
+            <div class='w-100 dropdown-value'>
+              <p class="p-2 m-0 fs-6 ">Sélectionner un utilisateur...</p>
+            </div>
+            <div class='w-100 dropdown-values'>
+              <p class="p-2 m-0 fs-6 ">Sélectionner un utilisateur...</p>
+              <ul>
+                <li class="align-items-center fs-6">
+                  <img class="rounded-circle" id="image-profil" src="https://tylermcginnis.com/would-you-rather/sarah.jpg" alt="image profil">
+                  Utilisateur 1
+                </li>
+                <li class="align-items-center fs-6">
+                  <img class="rounded-circle" id="image-profil" src="https://tylermcginnis.com/would-you-rather/tyler.jpg" alt="image profil">
+                  Utilisateur 2
+                </li>
+                <li class="align-items-center fs-6">
+                  <img class="rounded-circle" id="image-profil" src="https://tylermcginnis.com/would-you-rather/dan.jpg" alt="image profil">
+                  Utilisateur 3
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <p class="text-center">Sélectionnez un utilisateur dans la liste ci-dessus et cliquez sur le bouton de connexion. Il s'agit d'une application de démonstration qui ne nécessite pas de mot de passe.</p>
           <button id="button-login" class="text-bg-dark rounded-1 p-1">connexion</button>
         </div>
