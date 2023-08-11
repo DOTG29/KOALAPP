@@ -1,4 +1,5 @@
 import { _getUsers } from "./_DATA";
+import { setupQuestion } from './question';
 
 const element = document.getElementById("select-user-dropdown");
 // const users = document.querySelectorAll(".users")
@@ -27,6 +28,8 @@ export function setupDropdown() {
                     }
                     document.getElementById("button-login").classList.remove("disabled");
                     document.getElementById("button-logout").innerHTML = `<img class="rounded-circle" id="image-profil" src="${users[article].avatarURL}" alt="image profil">${users[article].name} decon`;
+
+                    setupQuestion();
                 });
             }
         },

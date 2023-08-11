@@ -10,3 +10,5 @@ setupDropdown();
 
 window.logout = logout;
 window.login = login;
+window.tab = "pas-repondu"
+window.tab = "repondu"
