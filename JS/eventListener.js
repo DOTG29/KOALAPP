@@ -18,7 +18,8 @@ export function setupEventListeners() {
         login();
     });
 
-    buttonLogout.addEventListener('click', () => {
+    buttonLogout.addEventListener('click', (event) => {
+        event.preventDefault()
         logout();
     });
 
