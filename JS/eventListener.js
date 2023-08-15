@@ -1,5 +1,5 @@
 import { home, leaderboard, login, newquestion } from "./route";
-import {didTapDropdown} from "./dropdown";
+import {didTapDropdown} from "./dropdownLogin";
 import { setupQuestion } from "./question";
 
 const buttonLogin = document.getElementById('button-login');

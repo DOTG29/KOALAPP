@@ -17,17 +17,17 @@ export function setupDropdown() {
             const element = document.getElementById("container_user");
             for(let article in users) {
                 const item = document.createElement('li');
-                item.className = 'd-flex align-items-center p-1 fs-6 users';
-                item.innerHTML = `<img class="rounded-circle" id="image-profil" src="${users[article].avatarURL}" alt="image profil">${users[article].name} `; // TODO id
+                item.className = 'd-flex align-items-center p-1 fs-6';
+                item.innerHTML = `<img class="rounded-circle image-profil" src="${users[article].avatarURL}" alt="image profil">${users[article].name} `; 
 
                 element.appendChild(item);
                 item.addEventListener('click', () => {
                     window.currentUser = users[article];
                     for(let selectedUserItem of document.getElementsByClassName("selected-user")) {
-                       selectedUserItem.innerHTML = `<img class="rounded-circle" id="image-profil" src="${users[article].avatarURL}" alt="image profil">${users[article].name} `;
+                       selectedUserItem.innerHTML = `<img class="rounded-circle image-profil" src="${users[article].avatarURL}" alt="image profil">${users[article].name} `;
                     }
                     document.getElementById("button-login").classList.remove("disabled");
-                    document.getElementById("button-logout").innerHTML = `<img class="rounded-circle" id="image-profil" src="${users[article].avatarURL}" alt="image profil">${users[article].name} decon`;
+                    document.getElementById("button-logout").innerHTML = `<img class="rounded-circle image-profil" src="${users[article].avatarURL}" alt="image profil">${users[article].name} deconnexion`;
 
                     setupQuestion();
                 });
