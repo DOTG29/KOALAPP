@@ -1,4 +1,5 @@
 import { _getQuestions } from "./_DATA";
+import { _getUsers } from "./_DATA";
 
 export function setupQuestion(){
     const containerQuestion = document.getElementById("container_question")
@@ -6,15 +7,31 @@ export function setupQuestion(){
 
     _getQuestions().then(
         function(questions){
-            for(let article in questions ){
+            for(let article in questions){
                 console.log(questions[article])
+
+                // if(
+                //     (window.tab == "repondu" && didAnwserQuestion(questions[article])) ||
+                //      (window.tab == "pas-repondu" && didNotAnwserQuestion(questions[article]))) {
+                //     const contenuQuestion = document.createElement("li");
+                //     contenuQuestion.innerHTML = `<p>${questions[article].optionOne.text} - by ${questions[article].author}</p>`
+                //     containerQuestion.appendChild(contenuQuestion);
+                // }
 
                 if(
                     (window.tab == "repondu" && didAnwserQuestion(questions[article])) ||
                      (window.tab == "pas-repondu" && didNotAnwserQuestion(questions[article]))) {
-                    const contenuQuestion = document.createElement("li");
-                    contenuQuestion.innerHTML = `<p>${questions[article].optionOne.text} - by ${questions[article].author}</p>`
+                        
+                    const contenuQuestion = document.createElement("div");
+                    contenuQuestion.innerHTML = `      <div class="container_user_question">
+                                                            <h2 class="name">${questions[article].author} demande</h2>
+                                                            <p class="question_1">${questions[article].optionOne.text}</p>
+                                                            <p class="question_2">${questions[article].optionTwo.text}</p>
+                                                            <img class="image_card" src="" alt="img">
+                                                            <button class="envoyer">submit</button>
+                                                       </div>`
                     containerQuestion.appendChild(contenuQuestion);
+                    console.log(contenuQuestion);
                 }
             }
         }

@@ -111,3 +111,43 @@ body {
     left: 25%;
 }
 
+
+
+
+
+
+
+/* test */
+
+.container_user_question {
+    width: 400px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+/* .image_card {
+    width: 100px;
+    height: 100px;
+    float: right;
+} */
+
+.name {
+    width: 80%;
+    margin-bottom: 7px;
+}
+
+.question_1 {
+    width: 80%;
+    margin-bottom: 7px;
+}
+
+.question_2 {
+    width: 80%;
+    margin-bottom: 7px;
+}
+
+.envoyer {
+    width: 91.5%;
+}

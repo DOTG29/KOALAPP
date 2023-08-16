@@ -5,6 +5,7 @@ const element = document.getElementById("select-user-dropdown");
 // const users = document.querySelectorAll(".users")
 let showDropdownValues = false;
 
+
 export function didTapDropdown() {
     showDropdownValues = !showDropdownValues;
     if(showDropdownValues) element.classList.remove("closed");
