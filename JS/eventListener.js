@@ -10,7 +10,8 @@ const buttonLeaderboard = document.getElementById('button-leaderboard');
 const selectUserDropdown = document.getElementById('select-user-dropdown')
 const questionRepondu = document.getElementById('question-repondu');
 const questionPasRepondu = document.getElementById('question-pas-repondu');
-
+const voirSondage = document.getElementsByClassName('voir-sondage')
+ 
 export function setupEventListeners() {
 
     selectUserDropdown.addEventListener('click', () => {

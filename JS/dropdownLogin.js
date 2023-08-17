@@ -15,6 +15,7 @@ export function didTapDropdown() {
 export function setupDropdown() {
     _getUsers().then(
         function(users) {
+            window.users = users;
             const element = document.getElementById("container_user");
             for(let article in users) {
                 const item = document.createElement('li');
@@ -28,7 +29,7 @@ export function setupDropdown() {
                        selectedUserItem.innerHTML = `<img class="rounded-circle image-profil" src="${users[article].avatarURL}" alt="image profil">${users[article].name} `;
                     }
                     document.getElementById("button-login").classList.remove("disabled");
-                    document.getElementById("button-logout").innerHTML = `<img class="rounded-circle image-profil" src="${users[article].avatarURL}" alt="image profil">${users[article].name} deconnexion`;
+                    document.getElementById("button-logout").innerHTML = ` Bonjour, ${users[article].name} <img class="rounded-circle image-profil" src="${users[article].avatarURL}" alt="image profil">    deconnexion`;
 
                     setupQuestion();
                 });

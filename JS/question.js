@@ -21,14 +21,15 @@ export function setupQuestion(){
                 if(
                     (window.tab == "repondu" && didAnwserQuestion(questions[article])) ||
                      (window.tab == "pas-repondu" && didNotAnwserQuestion(questions[article]))) {
-                        
+
+
                     const contenuQuestion = document.createElement("div");
-                    contenuQuestion.innerHTML = `      <div class="container_user_question">
-                                                            <h2 class="name">${questions[article].author} demande</h2>
+                    contenuQuestion.innerHTML = `      <div class="container_user_question m-3">
+                                                            <h2 class="name"><span>${window.users[questions[article].author].name}</span><span> demande</span></h2>
                                                             <p class="question_1">${questions[article].optionOne.text}</p>
                                                             <p class="question_2">${questions[article].optionTwo.text}</p>
-                                                            <img class="image_card" src="" alt="img">
-                                                            <button class="envoyer">submit</button>
+                                                            <img class="image_card" src="${window.users[questions[article].author].avatarURL}" alt="img">
+                                                            <button class="voir-sondage" class="envoyer">Voir le sondage</button>
                                                        </div>`
                     containerQuestion.appendChild(contenuQuestion);
                     console.log(contenuQuestion);
