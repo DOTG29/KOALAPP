@@ -2,6 +2,7 @@ const loginPage = document.getElementById('login');
 const homePage = document.getElementById('homepage');
 const navbar = document.getElementById('navbar');
 const newquestionPage = document.getElementById('newquestion');
+const questiondetailPage = document.getElementById('questiondetail');
 const leaderboardPage = document.getElementById('leaderboard');
 
 
@@ -9,7 +10,7 @@ export function login() {
     cachePage();
     navbar.classList.add("show")
     homePage.classList.add("show")
-    history.pushState(null, "", 'homepage'); 
+    history.pushState(null, "/", 'homepage'); 
 }
 
 export function logout() {
@@ -22,7 +23,14 @@ export function home() {
     cachePage();
     navbar.classList.add("show")
     homePage.classList.add("show")
-    history.pushState(null, "", 'homepage'); 
+    history.pushState(null, "", 'homepage');
+}
+
+export function questiondetail(question) {
+    cachePage();
+    navbar.classList.add("show")
+    questiondetailPage.classList.add("show")
+    history.pushState(null, "", `questions/${question}`); 
 }
 
 export function newquestion() {

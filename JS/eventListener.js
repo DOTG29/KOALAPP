@@ -10,8 +10,7 @@ const buttonLeaderboard = document.getElementById('button-leaderboard');
 const selectUserDropdown = document.getElementById('select-user-dropdown')
 const questionRepondu = document.getElementById('question-repondu');
 const questionPasRepondu = document.getElementById('question-pas-repondu');
-const voirSondage = document.getElementsByClassName('voir-sondage')
- 
+
 export function setupEventListeners() {
 
     selectUserDropdown.addEventListener('click', () => {
@@ -40,13 +39,17 @@ export function setupEventListeners() {
     });
 
     questionRepondu.addEventListener('click', () => {
-        setupQuestion();
         window.tab = "repondu"
+        questionPasRepondu.classList.remove('active');
+        questionRepondu.classList.add('active');
+        setupQuestion();
     })
 
     questionPasRepondu.addEventListener('click', () => {
-        setupQuestion();
         window.tab = "pas-repondu"
+        questionPasRepondu.classList.add('active');
+        questionRepondu.classList.remove('active');
+        setupQuestion();
     })
 };
 
