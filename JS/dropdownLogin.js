@@ -33,7 +33,7 @@ export function setupDropdown() {
                         selectedUserItem.innerHTML = `<img class="rounded-circle image-profil" src="${users[article].avatarURL}" alt="image profil">${users[article].name} `;
                     }
                     document.getElementById("button-login").classList.remove("disabled");
-                    document.getElementById("button-logout").innerHTML = `<img class="rounded-circle image-profil" src="${users[article].avatarURL}" alt="image profil">${users[article].name} deconnexion`;
+                    document.getElementById("button-logout").innerHTML = `Bonjour,  ${users[article].name} <img class="rounded-circle image-profil" src="${users[article].avatarURL}" alt="image profil"> deconnexion`;
 
                     setupQuestion();
                 });

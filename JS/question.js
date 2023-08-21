@@ -1,6 +1,5 @@
-import { _getQuestions } from "./_DATA";
-import { _getUsers } from "./_DATA";
-import { questiondetail } from "./route";
+import { _getQuestions, _saveQuestionAnswer, _getUsers } from "./_DATA";
+import { questiondetail, home } from "./route";
 
 export function setupQuestion() {
     const questionDetailInfo = document.getElementById("question_detail_info");
@@ -26,9 +25,9 @@ export function setupQuestion() {
                                                        </div>`
                     containerQuestion.appendChild(contenuQuestion);
 
-                    contenuQuestion.addEventListener('click', () => { 
+                    contenuQuestion.addEventListener('click', () => {
                         questiondetail(article);
-
+                        questionDetailInfo.innerHTML = '';
 
                         if (didAnwserQuestion(questions[article])) {
                             const totalVotes = questions[article].optionOne.votes.length + questions[article].optionTwo.votes.length;
@@ -64,21 +63,38 @@ export function setupQuestion() {
                                                              <p class="rather">Would you rather </p>
                                                              <img src="${window.users[questions[article].author].avatarURL}" alt="">
                                                              <div class="question_detail_1">
-                                                                <input type="radio" id="option" name="option" value="option_1" />
+                                                                <input type="radio" id="option" name="option" value="optionOne" />
                                                                 <label for="option">${questions[article].optionOne.text}</label>
                                                              </div>
                             
                                                              <div class="question_detail_2">
-                                                                <input type="radio" id="option" name="option" value="option_2" />
+                                                                <input type="radio" id="option" name="option" value="optionTwo" />
                                                                 <label for="option">${questions[article].optionTwo.text}</label>
                                                              </div>
-                                                             <button>submit</button>`
+                                                             <button id='submit-answer'>submit</button>`
 
                             questionDetailInfo.appendChild(containerQuestionDetail);
 
+
+                            const submitAnswer =  document.getElementById('submit-answer');
+
+                            submitAnswer.addEventListener('click', () => {
+
+                                const answer = document.querySelector('input[name="option"]:checked').value;
+                                console.log(answer, window.currentUser);
+
+                                _saveQuestionAnswer({ authedUser: window.currentUser.id, qid: questions[article].id, answer: answer })
+                                .then(function (users) {
+                                    setupQuestion();
+                                    home();
+                                });
+                            });
+
+                            
+
                         }
 
-                        
+
                     });
                 }
             }
